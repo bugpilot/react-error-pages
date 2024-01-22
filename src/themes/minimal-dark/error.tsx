@@ -10,14 +10,22 @@ import { ErrorPageProps } from "../../types";
 
 export default function Component({ onAddDetailsClick }: ErrorPageProps) {
   return (
-    <section className="flex flex-col items-center justify-center h-screen gap-4 px-4 text-center">
-      <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-        Oops! Something went wrong.
-      </h1>
-      <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-        We're sorry for the inconvenience. Please try refreshing the page, or
-        provide additional details if the problem persists.
-      </p>
+    <div className="w-screen h-screen flex flex-col items-center justify-center bg-zinc-950 p-4 text-center">
+      <h1 className="text-6xl font-bold text-zinc-50">Whoops!</h1>
+      <p className="mt-2 text-xl text-zinc-50">Something went wrong</p>
+      <div className="mt-10">
+        {/* <img
+          alt="Error illustration"
+          className="mx-auto"
+          height="200"
+          src="/placeholder.svg"
+          style={{
+            aspectRatio: "500/200",
+            objectFit: "cover",
+          }}
+          width="500"
+        /> */}
+      </div>
       <div className="flex flex-col gap-2 min-[400px]:flex-row">
         <Button variant="default" onClick={() => window.location.reload()}>
           Refresh Page
@@ -25,6 +33,6 @@ export default function Component({ onAddDetailsClick }: ErrorPageProps) {
 
         <AddDetailsForm onAddDetailsClick={onAddDetailsClick} />
       </div>
-    </section>
+    </div>
   );
 }

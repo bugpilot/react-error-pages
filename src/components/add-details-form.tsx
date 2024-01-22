@@ -10,7 +10,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { Textarea } from "./ui/textarea";
 
 type AddDetailsFormProps = {
-  onAddDetailsClick?: (...args: unknown[]) => void;
+  onAddDetailsClick?: ((...args: unknown[]) => void) | null;
 };
 
 export default function AddDetailsForm({
@@ -18,6 +18,10 @@ export default function AddDetailsForm({
 }: AddDetailsFormProps) {
   const [details, setDetails] = useState<string>("");
   const [reported, setReported] = useState<boolean>(false);
+
+  if (onAddDetailsClick === null) {
+    return null;
+  }
 
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
