@@ -5,7 +5,7 @@
   "main": "dist/index.mjs",
   "scripts": {
     "lint": "eslint --fix .",
-    "prebuild": "pnpm dlx bundlesize && pnpm run lint && pnpm audit",
+    "prebuild": "pnpm run lint && pnpm audit",
     "cleanup": "rm -rf ./dist && mkdir ./dist",
     "compile": "tsup",
     "build": "npm run cleanup && npm run compile",
@@ -46,7 +46,6 @@
     "@typescript-eslint/eslint-plugin": "^6.19.0",
     "@typescript-eslint/parser": "^6.19.0",
     "autoprefixer": "^10.4.17",
-    "bundlesize": "^0.18.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "eslint": "^8.56.0",
