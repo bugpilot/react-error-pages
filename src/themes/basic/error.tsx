@@ -3,6 +3,8 @@
  * @see https://v0.dev/t/FIyKVcOC9hw
  */
 
+import React from "react";
+
 import "../../common.css";
 import AddDetailsForm from "../../components/add-details-form";
 import { Button } from "../../components/ui/button";

@@ -1,6 +1,6 @@
 {
   "name": "@bugpilot/react-error-pages",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A Collection of reusable React Error Pages",
   "main": "dist/index.mjs",
   "scripts": {
@@ -43,8 +43,8 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@types/node": "^20.11.5",
     "@types/react": "^18.2.48",
-    "@typescript-eslint/eslint-plugin": "^6.19.0",
-    "@typescript-eslint/parser": "^6.19.0",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
     "autoprefixer": "^10.4.17",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
@@ -56,8 +56,7 @@
     "lucide-react": "^0.314.0",
     "prettier": "^3.2.4",
     "prettier-eslint": "^16.3.0",
-    "react": "^18.2.0",
-    "tailwind-merge": "^2.2.0",
+    "tailwind-merge": "^2.2.1",
     "tailwindcss": "^3.4.1",
     "tailwindcss-animate": "^1.0.7",
     "tsup": "^8.0.1",
@@ -67,6 +66,7 @@
     "provenance": true
   },
   "peerDependencies": {
-    "react": "^18.2.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
