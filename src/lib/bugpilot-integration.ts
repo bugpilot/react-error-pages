@@ -53,3 +53,14 @@ export const updateBugReport = (reportData: ReportData) => {
     void bugpilot.requestSessionUpload(reportData.metadata, reportData);
   });
 };
+
+export const saveBugReport = () => {
+  waitForBugpilot((bugpilot) => {
+    void bugpilot.saveBugReport(
+      {
+        triggerType: "error-page",
+      },
+      {},
+    );
+  });
+};

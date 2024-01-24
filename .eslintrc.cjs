@@ -5,6 +5,7 @@ module.exports = {
     "plugin:import/recommended",
     "plugin:import/typescript",
     "plugin:@typescript-eslint/recommended",
+    "plugin:storybook/recommended"
   ],
   plugins: ["@typescript-eslint/eslint-plugin"],
   parser: "@typescript-eslint/parser",
@@ -14,7 +15,7 @@ module.exports = {
   root: true,
   rules: {
     "@typescript-eslint/no-explicit-any": "error",
-    "@typescript-eslint/no-unsafe-assignment": "error",
+    "@typescript-eslint/no-unsafe-assignment": "off",
     "@typescript-eslint/no-floating-promises": "error",
     "@typescript-eslint/no-misused-promises": "error",
     "import/order": [

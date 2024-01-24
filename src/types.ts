@@ -1,9 +1,11 @@
 // Type definitions; see ./script/src/classes/types.ts
 // for complete types.
 
+type NextError = Error & { digest?: string };
+
 export type Metadata = {
-  userProvidedDescription: string;
-  triggerType: "widget";
+  userProvidedDescription?: string;
+  triggerType: "widget" | "error-page";
 } & Record<string, unknown>;
 
 export type ReportData = Record<string, unknown> & {
@@ -26,7 +28,7 @@ export type BugpilotInterface = {
 };
 
 export type ErrorPageProps = {
-  error: Error & { digest?: string };
+  error: NextError;
   reset: () => void;
 
   // (Optional Bugpilot integration props)
@@ -36,4 +38,10 @@ export type ErrorPageProps = {
   // and the reported error will be sent to Bugpilot > User Reports.
   // If set to null, the button is hidden.
   onAddDetailsClick?: ((...args: unknown[]) => void) | null;
+
+  // reportErrorFn is the function that will be called to report
+  // the error to Bugpilot. If the default Bugpilot bug reporting
+  // callback is provided the reported error will be sent to
+  // Bugpilot > Errors Log.
+  reportErrorFn?: (error: NextError) => void;
 };
