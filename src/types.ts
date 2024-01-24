@@ -17,7 +17,7 @@ type Report = {
 };
 
 export type BugpilotInterface = {
-  saveBugReport: (...args: unknown[]) => void;
+  saveReport: (...args: unknown[]) => void;
   identify: (...args: unknown[]) => void;
   report?: Report;
   logout: () => void;

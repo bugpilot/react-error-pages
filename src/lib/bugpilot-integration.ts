@@ -56,7 +56,7 @@ export const updateBugReport = (reportData: ReportData) => {
 
 export const saveBugReport = () => {
   waitForBugpilot((bugpilot) => {
-    void bugpilot.saveBugReport(
+    void bugpilot.saveReport?.(
       {
         triggerType: "error-page",
       },
