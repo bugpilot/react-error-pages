@@ -16,7 +16,6 @@ export default function Component({
   error,
 }: ErrorPageProps) {
   useEffect(() => {
-    console.log("Bugpilot Calling reportErrorFn", reportErrorFn, error);
     reportErrorFn?.(error); // send the js error to bugpilot
     saveBugReport?.(); // save the session recording
   }, [error]);
