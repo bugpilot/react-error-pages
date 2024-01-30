@@ -26,7 +26,7 @@ export default function Component({
         Oops! Something went wrong.
       </h1>
 
-      <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+      <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
         We're sorry for the inconvenience. Please try refreshing the page, or
         provide additional details if the problem persists.
       </p>
