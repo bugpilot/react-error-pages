@@ -10,7 +10,9 @@ import { ErrorPageProps } from "../../types";
 import { saveBugReport } from "@/lib/bugpilot-integration";
 
 export default function Component({
-  reset,
+  // NOTE: We have seen inconsistent behavior with the reset function in next 14.1.0+ so we are
+  // commenting it out for now. Using window.location.reload() instead.
+  // reset,
   onAddDetailsClick,
   reportErrorFn,
   error,
@@ -32,7 +34,7 @@ export default function Component({
       </p>
 
       <div className="flex flex-col gap-2 min-[400px]:flex-row">
-        <Button variant="default" onClick={() => reset()}>
+        <Button variant="default" onClick={() => window.location.reload()}>
           Try again
         </Button>
 
