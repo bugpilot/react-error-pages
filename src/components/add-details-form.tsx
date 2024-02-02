@@ -72,7 +72,7 @@ export default function AddDetailsForm({
 
           {reported ? (
             <p className="text-sm text-green-800">
-              Thank you for your feedback! We will look into this issue.
+              Issue reported. We're on it.
             </p>
           ) : null}
 
